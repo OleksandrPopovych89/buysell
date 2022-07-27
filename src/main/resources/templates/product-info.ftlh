@@ -5,7 +5,8 @@
     <title>BUYSELL</title>
 </head>
 <body>
-<h1>BUYSELL</h1><hr>
+<h1>BUYSELL</h1>
+<hr>
 <h4>Детальна інформація про товар></h4>
 <#list images as img>
     <img src="/images/${img.id}" height="60px"/><br><br>
@@ -15,10 +16,7 @@
 <b>Опис товару: </b>${product.description}<br>
 <b>Ціна: </b>${product.price}<br>
 <b>Місто товару: </b>${product.city}<br>
-<b>Автор: </b>${product.author}<br>
-<hr>
-<form action="/product/delete/${product.id}" method="post">
-    <input type="submit" value="Видалити товар"/>
-</form>
+<b>Автор: </b>${product.user.name}<br>
+<b>Номер телефону: </b>${product.user.phoneNumber}<br>
 </body>
 </html>
